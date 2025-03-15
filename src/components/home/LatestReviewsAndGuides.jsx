@@ -1,14 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import ReviewCard from '@/components/reviews/cards/ReviewCard';
-import EmptyState from '@/components/ui/states/EmptyState';
+import React from "react";
+import Link from "next/link";
+import ReviewCard from "@/components/reviews/cards/ReviewCard";
+import EmptyState from "@/components/ui/states/EmptyState";
 
-
-
-const LatestStories = ({ 
-  data, 
-  isSeeAll = false 
-}) => {
+const LatestStories = ({ data, isSeeAll = false }) => {
   // If no data is provided, return empty state
   if (!data || data.length === 0) {
     return <EmptyState />;
@@ -20,10 +15,12 @@ const LatestStories = ({
   return (
     <div className="w-full">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-semibold dark:text-white">Latest Stories</h2>
+        <h2 className="text-2xl font-semibold dark:text-white">
+          Latest Stories
+        </h2>
         {!isSeeAll && (
-          <Link 
-            href="/reviews" 
+          <Link
+            href="/reviews"
             className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
           >
             See All &rarr;

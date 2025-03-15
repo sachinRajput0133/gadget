@@ -1,4 +1,4 @@
-import FeaturedCards from "./FeaturedCards";
+import FeaturedCards from "./FeaturedArticle";
 import LatestReviewAndGuide from "./LatestReviewAndGuide";
 import LatestStories from "./LatestReviewsAndGuides";
 

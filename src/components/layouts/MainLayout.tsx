@@ -8,7 +8,7 @@ import { fetchReviews } from '@/store/slices/reviewSlice';
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon, MagnifyingGlassIcon, ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import Footer from '@/components/Footer';
 import { Category } from '@/store/slices/categorySlice';
-import FeaturedCards from '@/components/home/FeaturedCards';
+import FeaturedCards from '@/components/home/FeaturedArticle';
 import { selectReviews } from '@/store/slices/reviewSlice';
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
@@ -182,9 +182,9 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <div className=" min-h-screen flex flex-col bg-white dark:bg-gray-900 mx-auto w-full text-gray-900 dark:text-white">
       <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav className="container mx-auto   py-4 px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
               <Link href="/" className="text-2xl font-bold text-primary-600 dark:text-primary-400">
@@ -393,7 +393,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
       {/* Categories header - matches footer background and hides on scroll */}
       <div className={`bg-gray-900 text-white shadow-md transition-all duration-300 ${scrolled ? 'hidden' : 'block'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
           {isSearchExpanded ? (
             // Expanded search form that covers the entire header
             <div className="relative w-full">
@@ -448,7 +448,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
       {/* Horizontal ad space below secondary header */}
       <div className="w-full bg-gray-100 dark:bg-gray-700 border-t border-b border-gray-200 dark:border-gray-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="h-[200px] flex items-center justify-center">
             <div className="text-center">
               <p className="text-gray-500 dark:text-gray-400 text-sm">Advertisement</p>
@@ -463,7 +463,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       </div>
 
       <main className="flex-grow bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="container w-full mx-auto py-8">
           {children}
         </div>
       </main>

@@ -1,5 +1,5 @@
 import { Review } from "@/types/review";
-import FeaturedCards from "../home/FeaturedCards";
+import FeaturedCards from "../home/FeaturedArticle";
 import LatestReviewAndGuide from "../home/LatestReviewAndGuide";
 import LatestStories from "../home/LatestReviewsAndGuides";
 
