@@ -61,10 +61,10 @@ export const fetchReviews = createAsyncThunk<
     // Check if we've recently fetched reviews (within the last 30 seconds)
     const now = Date.now();
     const lastFetched = state.reviews.lastFetched;
-    if (lastFetched && now - lastFetched < 30000 && state.reviews.items) {
-      // Return the existing items to avoid too many requests
-      return state.reviews.items;
-    }
+    // if (lastFetched && now - lastFetched < 30000 && state.reviews.items) {
+    //   // Return the existing items to avoid too many requests
+    //   return state.reviews.items;
+    // }
     
     const {
       page = 1,
