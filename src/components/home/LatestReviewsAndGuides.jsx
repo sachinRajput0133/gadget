@@ -3,27 +3,9 @@ import Link from 'next/link';
 import ReviewCard from '@/components/reviews/cards/ReviewCard';
 import EmptyState from '@/components/ui/states/EmptyState';
 
-interface Review {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt?: string | null | undefined;
-  rating: number;
-  coverImage?: string;
-  createdAt: string;
-  category?: {
-    id: string;
-    name: string;
-    slug: string;
-  } | null;
-}
 
-interface LatestStoriesProps {
-  data: Review[];
-  isSeeAll?: boolean;
-}
 
-const LatestStories: React.FC<LatestStoriesProps> = ({ 
+const LatestStories = ({ 
   data, 
   isSeeAll = false 
 }) => {

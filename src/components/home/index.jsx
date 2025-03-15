@@ -1,16 +1,10 @@
-import { Review } from "@/types/review";
 import FeaturedCards from "./FeaturedCards";
 import LatestReviewAndGuide from "./LatestReviewAndGuide";
 import LatestStories from "./LatestReviewsAndGuides";
 
-interface Category {
-  reviews: Review[];
-  featuredReviews: Review[];
-  isHome?: boolean;
-}
 
 // Home page content component
-const HomeContent: React.FC<Category> = ({
+const HomeContent = ({
   reviews,
   featuredReviews,
   isHome = false,
@@ -20,10 +14,10 @@ const HomeContent: React.FC<Category> = ({
       <FeaturedCards featuredReviews={featuredReviews} />
     </div>{" "}
     <div className=" mx-auto py-12 grid grid-cols-12 gap-6">
-      <div className="col-span-7">
+      <div className="col-span-9">
         <LatestStories data={reviews} isSeeAll={true} />
       </div>
-      <div className="hidden lg:block lg:col-span-5">
+      <div className="hidden lg:block lg:col-span-3">
         <div className="sticky top-24 bg-gray-100 dark:bg-gray-700 rounded-lg p-4 h-[600px] flex items-center justify-center border border-gray-200 dark:border-gray-600">
           <div className="text-center">
             <p className="text-gray-500 dark:text-gray-400 text-sm">
@@ -52,7 +46,7 @@ const HomeContent: React.FC<Category> = ({
     </div>
     {isHome ? (
       <div className=" mx-auto">
-        <LatestReviewAndGuide data={reviews} isSeeAll={true} />
+        <LatestReviewAndGuide reviews={reviews} isLoading={false} />
       </div>
     ) : null}
   </>

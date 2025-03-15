@@ -27,6 +27,6 @@
       "@config/*": ["./config/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/routes.jsx", "src/components/Category/CategoryCard.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/routes.jsx", "src/components/Category/CategoryCard.jsx", "src/components/reviews/cards/ReviewCard.jsx", "src/components/home/LatestReviewsAndGuides.jsx", "src/components/home/LatestReviewAndGuide.jsx", "src/components/home/index.jsx"],
   "exclude": ["node_modules"]
 }
