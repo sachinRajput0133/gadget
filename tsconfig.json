@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared/*": ["./shared/*"],
+      "@icons/*": ["./icons/*"],
+      "@components/*": ["./components/*"],
+      "@widget/*": ["./widget/*"],
+      "@utils/*": ["./utils/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@lib/*": ["./lib/*"],
+      "@models/*": ["./models/*"],
+      "@config/*": ["./config/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/routes.jsx", "src/components/Category/CategoryCard.jsx"],
+  "exclude": ["node_modules"]
+}
