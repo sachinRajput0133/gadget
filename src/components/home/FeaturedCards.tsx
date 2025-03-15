@@ -42,7 +42,7 @@ const FeaturedCards: React.FC<FeaturedCardsProps> = ({ featuredReviews, isHome =
         )}
         <div className="grid grid-cols-12 gap-4">
           {/* Main featured card - takes col-span-6 and has height of 2 rows */}
-          <div className="col-span-12 lg:col-span-6 row-span-2 mb-4 lg:mb-0">
+          <button className="col-span-12 text-start lg:col-span-6 row-span-2 mb-4 lg:mb-0 cursor-pointer">
             <div className="relative h-[300px] md:h-[400px] lg:h-full bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
               <div className="relative h-full">
                 <Image
@@ -79,11 +79,11 @@ const FeaturedCards: React.FC<FeaturedCardsProps> = ({ featuredReviews, isHome =
                 </Link>
               </div>
             </div>
-          </div>
+          </button>
 
           {/* Secondary featured cards - each takes col-span-3 and has height of 1 row */}
           {secondaryFeatured.map((review, index) => (
-            <div key={review.id} className="col-span-12 sm:col-span-6 lg:col-span-3 row-span-1">
+            <button key={review.id} className="cursor-pointer wfull text-start col-span-12 sm:col-span-6 lg:col-span-3 row-span-1">
               <div className="h-[200px] sm:h-[220px] md:h-[240px] bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden relative">
                 <div className="relative h-full">
                   <Image
@@ -116,7 +116,7 @@ const FeaturedCards: React.FC<FeaturedCardsProps> = ({ featuredReviews, isHome =
                   </Link>
                 </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

@@ -59,9 +59,9 @@ const LatestReviewAndGuide: React.FC<LatestReviewAndGuideProps> = ({
           <ReviewCard key={review.id} review={review} />
         ))} */}
           {displayData.map((review) => (
-            <div
+            <button
               key={review.id}
-              className="col-span-12 sm:col-span-6 lg:col-span-3 row-span-1"
+              className="text-left col-span-12 sm:col-span-6 lg:col-span-3 row-span-1"
             >
               <div className="h-[200px] sm:h-[220px] md:h-[240px] bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden relative">
                 <div className="relative h-full">
@@ -95,7 +95,7 @@ const LatestReviewAndGuide: React.FC<LatestReviewAndGuideProps> = ({
                   </Link>
                 </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

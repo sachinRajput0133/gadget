@@ -21,7 +21,7 @@ interface ReviewCardProps {
 
 const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
   return (
-    <div className="flex flex-col md:flex-row  bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:translate-y-[-4px]">
+    <button className="w-full flex text-left flex-col md:flex-row  bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:translate-y-[-4px]">
       <div className="md:w-1/3 h-[180px] md:h-auto relative">
         <Image
           src={review.coverImage || '/images/logo.png'}
@@ -63,7 +63,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
